@@ -1,0 +1,45 @@
+<html>
+	<head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+		<style>
+			body{
+				background-image: url("{{ url_for('static', filename='img_1.jpg') }}");
+				background-attachment: fixed;
+				text-align: center;
+				}
+			</style>
+    </head>
+	<body>
+		<div class="topnav">
+			<a href="{{ url_for('home') }}">Home</a>
+			<a href="{{ url_for('breast_cancer') }}">Breast Cancer Prediction</a>
+			<a href="{{ url_for('diabetes') }}">Diabetes Prediction</a>
+			<a href="{{ url_for('liver') }}">Liver Disease Prediction</a>
+			<a style="float:right" href="{{ url_for('about') }}">About</a>
+		</div>
+
+		<section>
+			<h1 style = "font-size: 48px;   
+			font-family: 'georgia';   
+			font-weight: bold;   
+			text-align: center;
+			border-style: solid;
+  			border-color: rgb(248, 250, 248);
+			  border-radius: 25px;"> ABOUT</h1>
+			<p style = "font-size: 28px;   
+			font-family: 'Arial, Helvetica, sans-serif';   
+			color: #6Cf;
+			font-weight: bold;   
+			text-align: center;
+			border-style: solid;
+  			border-color: rgb(248, 250, 248);
+			  border-radius: 25px;">This project was developed by Takudzwa Mutema and Takudzwa Chikasha, University of Zimbabwe
+				second year students. The web application is meant to help in predicting diseaases that usally
+				affect women such as breast cancer, liver and diabetes. 
+			</p>
+		</section>
+		<footer>
+
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,112 @@
+<html>
+	<head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+		<style>
+			body{
+				background-image: url("{{ url_for('static', filename='img_1.jpg') }}");
+				background-attachment: fixed;
+				text-align: center;
+				}
+			</style>
+    </head>
+	<body style="background-color: #4CAF50;text-align:center; background-image: -moz-radial-gradient();">
+		<div class="topnav">
+			<a href="{{ url_for('home') }}">Home</a>
+			<a href="{{ url_for('breast_cancer') }}">Breast Cancer Prediction</a>
+			<a href="{{ url_for('diabetes') }}">Diabetes Prediction</a>
+			<a href="{{ url_for('liver') }}">Liver Disease Prediction</a>
+			<a style="float:right" href="{{ url_for('about') }}">About</a>
+		</div>
+
+		<section>
+			<h1 style = "font-size: 48px;   
+			font-family: 'georgia';   
+			font-weight: bold;   
+			text-align: center;
+			border-style: solid;
+  			border-color: rgb(248, 250, 248);
+			  border-radius: 25px;"> Diabetes Prediction </h1>
+        
+        	<form  style="font-size: 17px;font-family: Arial, Helvetica, sans-serif;font-weight: bold" action="{{url_for('predict_diabetes')}}">
+            	Radius Mean
+            	<br> 
+                	<input type = "text" name = 'a'
+                	placeholder="Enter Radius Mean" required="required"style = "width: 50%;
+					padding: 12px 20px;
+					margin: 8px 0;
+					box-sizing: border-box">
+            	<br>
+            	Perimeter Mean
+            	<br>
+                	<input type = "text" name = 'b'
+                	placeholder="Enter Perimeter Mean" required="required"style = "width: 50%;
+					padding: 12px 20px;
+					margin: 8px 0;
+					box-sizing: border-box">
+            	<br>
+            	Area Mean
+            	<br>
+                	<input type = "text" name = 'c'
+                	placeholder="Enter Area Mean" required="required"style = "width: 50%;
+					padding: 12px 20px;
+					margin: 8px 0;
+					box-sizing: border-box">
+            	<br>
+            	Concavity Mean
+            	<br>
+                	<input type = "text" name = 'd'
+                	placeholder="Enter Concavity Mean" required="required"style = "width: 50%;
+					padding: 12px 20px;
+					margin: 8px 0;
+					box-sizing: border-box">
+            	<br>
+            	Concave Points Mean
+            	<br>
+                	<input type = "text" name = 'e'
+                	placeholder="Enter Concave Points Mean" required="required"style = "width: 50%;
+					padding: 12px 20px;
+					margin: 8px 0;
+					box-sizing: border-box">
+            	<br>
+            	BMI(Body Mass Index)
+            	<br>
+                	<input type = "text" name = 'f'
+                	placeholder="Enter BMI(Body Mass Index)" required="required"style = "width: 50%;
+					padding: 12px 20px;
+					margin: 8px 0;
+					box-sizing: border-box">
+            	<br>
+            	Diabetes Pedegree Function 
+            	<br>
+                	<input type = "text" name = 'g'
+                	placeholder="Enter Diabetes Pedegree Function" required="required"style = "width: 50%;
+					padding: 12px 20px;
+					margin: 8px 0;
+					box-sizing: border-box">
+            	<br>
+            	Age
+            	<br>
+                	<input type = "text" name = 'h'
+                	placeholder="Enter Age" required="required"style = "width: 50%;
+					padding: 12px 20px;
+					margin: 8px 0;
+					box-sizing: border-box">
+            	<br>
+                	<input type="submit" value="Predict" style = "background-color: #4CAF50; /* Green */
+					border: none;
+					color: white;
+					padding: 15px 32px;
+					text-align: center;
+					text-decoration: none;
+					display: inline-block;
+					font-size: 16px;
+					box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">
+
+        	</form>
+
+		</section>
+		<footer>
+
+		</footer>
+	</body>
+</html>

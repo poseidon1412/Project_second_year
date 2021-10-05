@@ -1,0 +1,130 @@
+<html>
+	<head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+		<style>
+			body{
+				background-image: url("{{ url_for('static', filename='img_1.jpg') }}");
+				background-attachment: fixed;
+				text-align: center;
+				}
+			</style>
+    </head>
+	<body>
+		<div class="topnav">
+			<a href="{{ url_for('home') }}">Home</a>
+			<a href="{{ url_for('breast_cancer') }}">Breast Cancer Prediction</a>
+			<a href="{{ url_for('diabetes') }}">Diabetes Prediction</a>
+			<a href="{{ url_for('liver') }}">Liver Disease Prediction</a>
+			<a style="float:right" href="{{ url_for('about') }}">About</a>
+		</div>
+
+		<section>
+			<h1 style = "font-size: 48px;   
+			font-family: 'georgia';   
+			font-weight: bold;   
+			text-align: center;
+			border-style: solid;
+  			border-color: rgb(248, 250, 248);
+			  border-radius: 25px;"> Liver Disease Prediction </h1>
+        
+        	<form  style="font-size: 17px;font-family: Arial, Helvetica, sans-serif;font-weight: bold" action = "{{url_for('predict_liver')}}" class = "input1">
+            	Age
+            	<br> 
+                	<input type = "text" name = 'a'
+                	placeholder="Enter Age" required="required" style = "width: 50%;
+					padding: 12px 20px;
+					margin: 8px 0;
+					box-sizing: border-box">
+            	<br>
+            	Gender
+            	<br>
+                	<input type="radio" name="b" value="1">Male
+                	<input type="radio" name="b" value="0">Female
+            	<br>
+            	Total Bilirubin
+            	<br>
+                	<input type = "text" name = 'c'
+                	placeholder="Enter Total Bilirubin level" required="required" style = "width: 50%;
+					padding: 12px 20px;
+					margin: 8px 0;
+					box-sizing: border-box">
+            	<br>
+            	Direct Bilirubin
+            	<br>
+                	<input type = "text" name = 'd'
+                	placeholder="Enter Direct Bilirubin level" required="required"style = "width: 50%;
+					padding: 12px 20px;
+					margin: 8px 0;
+					box-sizing: border-box">
+            	<br>
+            	Alkaline Phosphate
+            	<br>
+                	<input type = "text" name = 'e'
+                	placeholder="Enter Alkaline Phosphate level" required="required" style = "width: 50%;
+					padding: 12px 20px;
+					margin: 8px 0;
+					box-sizing: border-box">
+           		<br>
+            	Alamine Aminotransferase
+            	<br> 
+                	<input type = "text" name = 'f'
+                	placeholder="Enter Alamine Amino transferase" required="required"style = "width: 50%;
+					padding: 12px 20px;
+					margin: 8px 0;
+					box-sizing: border-box">
+           		<br>
+            	Aspartate Aminotransferase
+           		<br>
+                	<input type = "text" name = 'g'
+                	placeholder="Enter Aspartate Aminotransferase" required="required" style = "width: 50%;
+					padding: 12px 20px;
+					margin: 8px 0;
+					box-sizing: border-box">
+            	<br>
+            	Total Proteins
+            	<br>
+                	<input type = "text" name = 'h'
+                	placeholder="Enter Total Proteins" required="required" style = "width: 50%;
+					padding: 12px 20px;
+					margin: 8px 0;
+					box-sizing: border-box"> 
+            	<br>
+            	Albumin
+            	<br>
+                	<input type = "text" name = 'i'
+                	placeholder="Enter Albumin" required="required"style = "width: 50%;
+					padding: 12px 20px;
+					margin: 8px 0;
+					box-sizing: border-box">
+            	<br>
+            	Albumin and Guolin Ratios
+            	<br>
+                	<input type = "text" name = 'j'
+                	placeholder="Enter Albumin and Guolin Ratios" required="required"style = "width: 50%;
+					padding: 12px 20px;
+					margin: 8px 0;
+					box-sizing: border-box">
+            	<br>
+                	<input type="submit" , value='Predict' style = "background-color: #4CAF50; /* Green */
+					border: none;
+					color: white;
+					padding: 15px 32px;
+					text-align: center;
+					text-decoration: none;
+					display: inline-block;
+					font-size: 16px;
+					box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">
+
+        	</form>
+
+		</section>
+		<footer>
+
+		</footer>
+	</body>
+</html>
+
+
+
+
+style="text-align:center"
